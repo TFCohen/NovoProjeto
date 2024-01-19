@@ -24,4 +24,21 @@ admin.site.register(Curso)
 #git remote add origin "Endereço do repositório"
 
 #Subindo para o github
-#git push -u origin master (ou o branch em uso, ou seja, a palavra que estiver entre parênteses)###
+#git push -u origin master (ou o branch em uso, ou seja, a palavra que estiver entre parênteses)
+
+#atualizar arquivo no git hub
+#git init
+#git add .
+#git commit -m " xxxx "
+#git push -u origin
+
+#para trocar o repositorio no git hub
+#
+#git remote -v
+#git push -u origin main (pode ser main ou master ou...)
+#
+#git remote remove origin
+#git remote add origin NOVO_ENDERECO
+
+#rodar o servidor
+#python manage.py runserver

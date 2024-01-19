@@ -19,6 +19,6 @@ class Curso(models.Model):
     investimento = models.DecimalField(max_digits=11, decimal_places=2)
 
     def __str__ (self):
-        return self.nome
+        return self.nome + self.carga + self.investimento
 
    
