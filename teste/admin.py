@@ -42,3 +42,11 @@ admin.site.register(Curso)
 
 #rodar o servidor
 #python manage.py runserver
+
+
+#git init
+#git add .
+#git commit -m "MENSAGEM"
+#git push -u origin "nome do branch (diretorio)"
+
+#git branch -M "nome do branch (diretorio)"
