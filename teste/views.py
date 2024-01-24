@@ -7,13 +7,13 @@ from teste.models import Aluno, Curso
 # Create your views here.
 # Create your views Aluno
 def index(request):
-    return HttpResponse ("Olá, Mundo! Agora é na Web!")
+    return render (request, 'inicio.html')
 
 def outro(request):
     return HttpResponse ("Isso é uma requisição!")
 
 def listarAlunos(request):
-    alunos = Aluno.objects.all()
+    alunos = Aluno.objects.all().order_by('nome')
     return render(request, 'listar_aluno.html', 
        {'alunos': alunos})
 

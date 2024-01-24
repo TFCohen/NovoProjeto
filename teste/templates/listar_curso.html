@@ -2,7 +2,7 @@
 {% block content%}
 
 <h2>Listar Cursos</h2>
-    <a href="{% url 'incluir_cursos' %}" class=" btn btn-secondary">Cadastrar novo curso</a>
+    <a href="{% url 'incluir_cursos' %}" class=" btn btn-primary">Cadastrar novo curso</a>
     <table class="table table-striped">
         <thead>
             <tr>
@@ -18,7 +18,7 @@
                     <td>{{a.cargal}}</td>
                     <td>
                         <a href="{% url 'editar_curso' a.id %}" class=" btn btn-secondary">Editar</a>
-                        <a href="{% url 'excluir_curso' a.id %} " class=" btn btn-secondary">Excluir</a>
+                        <a href="{% url 'excluir_curso' a.id %} " class=" btn btn-danger">Excluir</a>
                     </td>
                 </tr>
             {% endfor %}        
