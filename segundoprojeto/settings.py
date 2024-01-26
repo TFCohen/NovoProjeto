@@ -30,7 +30,7 @@ ALLOWED_HOSTS = []
 
 
 # Application definition
-# coloca aqui os apps adicionados
+# coloca aqui os apps adicionados (substituir - por _ no INSTALLED_APPS)
 
 INSTALLED_APPS = [
     "django.contrib.admin",
@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     'teste',
     'django_bootstrap5',
+    'django_bootstrap_icons',
 ]
 
 MIDDLEWARE = [

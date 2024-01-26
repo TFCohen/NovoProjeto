@@ -13,7 +13,12 @@ def outro(request):
     return HttpResponse ("Isso é uma requisição!")
 
 def listarAlunos(request):
-    alunos = Aluno.objects.all().order_by('nome')
+    busca = request.GET.get('busca')
+    if busca:
+        alunos = Aluno.objects.filter(nome__icontains=busca).extra(select={'novo':'lower (nome)'})
+    else:
+        alunos = Aluno.objects.all().extra(select={'novo':'lower(nome)'}).order_by('novo')
+
     return render(request, 'listar_aluno.html', 
        {'alunos': alunos})
 

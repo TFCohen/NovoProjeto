@@ -1,12 +1,27 @@
 {%extends 'base.html' %}
+{% load bootstrap_icons %}
+
 {% block content%}
 
 <h2>Tela de Aluno</h2>
     <a href="{% url 'incluir_alunos' %}" class=" btn btn-primary">Cadastrar novo aluno</a> 
+
+    <form method="get">
+        <div class="input-group mb-3">
+            <input type="text" class="form-control"
+                    placeholder="Digite parte do nome para busca"
+                    aria-label="Digite parte do nome para busca"
+                    name="busca"
+                    aria-describedby="botao-busca">
+            <button class="btn btn-outline-secondary" type="submit"
+                    id="botao-busca">{% bs_icon 'search' %}</button>
+        </div>
+    </form>
+   
     <table class="table table-striped">
         <thead>
             <tr>
-                <th>Nome</th>
+                <th><a href="">Nome</a></th>
                 <th>E-mail</th>
                 <th>Ações</th>
             </tr>
